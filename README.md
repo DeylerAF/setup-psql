@@ -1,7 +1,7 @@
 # How to set up PostgreSQL
 
 > [!TIP]
->Instructions to set up PostgreSQL on your machine
+>Instructions to set up PostgreSQL and pgAdmin on your machine
 
 ## Linux
 **Install PostgreSQL**
@@ -26,4 +26,24 @@ sudo -u postgres psql
 
 ```bash
 alter user postgres with password 'changeme';
+```
+**Install pgAdmin for both desktop and web modes**
+
+```bash
+sudo apt install pgadmin4
+```
+
+**Install for desktop mode only:**
+```bash
+sudo apt install pgadmin4-desktop
+```
+
+**Install for web mode only:**
+```bash
+sudo apt install pgadmin4-web 
+```
+
+**Configure the webserver, if you installed pgadmin4-web:**
+```bash
+sudo /usr/pgadmin4/bin/setup-web.sh
 ```
